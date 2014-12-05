@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D3754021A31A67C00FA35E5 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3754011A31A67C00FA35E5 /* Member.m */; };
+		1D3754061A31A6EE00FA35E5 /* ShowDataTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3754051A31A6EE00FA35E5 /* ShowDataTableViewController.m */; };
 		1D8FBF3C1A31A4AE006FCEAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF3B1A31A4AE006FCEAE /* main.m */; };
 		1D8FBF3F1A31A4AE006FCEAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF3E1A31A4AE006FCEAE /* AppDelegate.m */; };
 		1D8FBF421A31A4AE006FCEAE /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF401A31A4AE006FCEAE /* CoreData.xcdatamodeld */; };
@@ -30,6 +31,8 @@
 /* Begin PBXFileReference section */
 		1D3754001A31A67C00FA35E5 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
 		1D3754011A31A67C00FA35E5 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
+		1D3754041A31A6EE00FA35E5 /* ShowDataTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDataTableViewController.h; sourceTree = "<group>"; };
+		1D3754051A31A6EE00FA35E5 /* ShowDataTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDataTableViewController.m; sourceTree = "<group>"; };
 		1D8FBF361A31A4AE006FCEAE /* CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8FBF3A1A31A4AE006FCEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8FBF3B1A31A4AE006FCEAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 			children = (
 				1D8FBF3D1A31A4AE006FCEAE /* AppDelegate.h */,
 				1D8FBF3E1A31A4AE006FCEAE /* AppDelegate.m */,
+				1D3754041A31A6EE00FA35E5 /* ShowDataTableViewController.h */,
+				1D3754051A31A6EE00FA35E5 /* ShowDataTableViewController.m */,
 				1D8FBF461A31A4AE006FCEAE /* Main.storyboard */,
 				1D8FBF491A31A4AE006FCEAE /* Images.xcassets */,
 				1D8FBF4B1A31A4AE006FCEAE /* LaunchScreen.xib */,
@@ -232,6 +237,7 @@
 			files = (
 				1D8FBF3F1A31A4AE006FCEAE /* AppDelegate.m in Sources */,
 				1D8FBF3C1A31A4AE006FCEAE /* main.m in Sources */,
+				1D3754061A31A6EE00FA35E5 /* ShowDataTableViewController.m in Sources */,
 				1D8FBF421A31A4AE006FCEAE /* CoreData.xcdatamodeld in Sources */,
 				1D3754021A31A67C00FA35E5 /* Member.m in Sources */,
 			);
