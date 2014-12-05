@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D3754021A31A67C00FA35E5 /* Member.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D3754011A31A67C00FA35E5 /* Member.m */; };
 		1D8FBF3C1A31A4AE006FCEAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF3B1A31A4AE006FCEAE /* main.m */; };
 		1D8FBF3F1A31A4AE006FCEAE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF3E1A31A4AE006FCEAE /* AppDelegate.m */; };
 		1D8FBF421A31A4AE006FCEAE /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF401A31A4AE006FCEAE /* CoreData.xcdatamodeld */; };
@@ -27,6 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D3754001A31A67C00FA35E5 /* Member.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Member.h; sourceTree = "<group>"; };
+		1D3754011A31A67C00FA35E5 /* Member.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Member.m; sourceTree = "<group>"; };
 		1D8FBF361A31A4AE006FCEAE /* CoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8FBF3A1A31A4AE006FCEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8FBF3B1A31A4AE006FCEAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +62,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D3754031A31A68700FA35E5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				1D8FBF401A31A4AE006FCEAE /* CoreData.xcdatamodeld */,
+				1D3754001A31A67C00FA35E5 /* Member.h */,
+				1D3754011A31A67C00FA35E5 /* Member.m */,
+			);
+			name = CoreData;
+			sourceTree = "<group>";
+		};
 		1D8FBF2D1A31A4AE006FCEAE = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +98,7 @@
 				1D8FBF461A31A4AE006FCEAE /* Main.storyboard */,
 				1D8FBF491A31A4AE006FCEAE /* Images.xcassets */,
 				1D8FBF4B1A31A4AE006FCEAE /* LaunchScreen.xib */,
-				1D8FBF401A31A4AE006FCEAE /* CoreData.xcdatamodeld */,
+				1D3754031A31A68700FA35E5 /* CoreData */,
 				1D8FBF391A31A4AE006FCEAE /* Supporting Files */,
 			);
 			path = CoreData;
@@ -220,6 +233,7 @@
 				1D8FBF3F1A31A4AE006FCEAE /* AppDelegate.m in Sources */,
 				1D8FBF3C1A31A4AE006FCEAE /* main.m in Sources */,
 				1D8FBF421A31A4AE006FCEAE /* CoreData.xcdatamodeld in Sources */,
+				1D3754021A31A67C00FA35E5 /* Member.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +424,7 @@
 				1D8FBF5E1A31A4AE006FCEAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1D8FBF5F1A31A4AE006FCEAE /* Build configuration list for PBXNativeTarget "CoreDataTests" */ = {
 			isa = XCConfigurationList;
@@ -418,6 +433,7 @@
 				1D8FBF611A31A4AE006FCEAE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
