@@ -16,6 +16,7 @@
 		1D8FBF4A1A31A4AE006FCEAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FBF491A31A4AE006FCEAE /* Images.xcassets */; };
 		1D8FBF4D1A31A4AE006FCEAE /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1D8FBF4B1A31A4AE006FCEAE /* LaunchScreen.xib */; };
 		1D8FBF591A31A4AE006FCEAE /* CoreDataTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D8FBF581A31A4AE006FCEAE /* CoreDataTests.m */; };
+		1DC817BF1A33036E00862B99 /* AddNewDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1DC817BE1A33036E00862B99 /* AddNewDataViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,8 @@
 		1D8FBF521A31A4AE006FCEAE /* CoreDataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D8FBF571A31A4AE006FCEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D8FBF581A31A4AE006FCEAE /* CoreDataTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CoreDataTests.m; sourceTree = "<group>"; };
+		1DC817BD1A33036E00862B99 /* AddNewDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddNewDataViewController.h; sourceTree = "<group>"; };
+		1DC817BE1A33036E00862B99 /* AddNewDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddNewDataViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +103,8 @@
 				1D8FBF3E1A31A4AE006FCEAE /* AppDelegate.m */,
 				1D3754041A31A6EE00FA35E5 /* ShowDataTableViewController.h */,
 				1D3754051A31A6EE00FA35E5 /* ShowDataTableViewController.m */,
+				1DC817BD1A33036E00862B99 /* AddNewDataViewController.h */,
+				1DC817BE1A33036E00862B99 /* AddNewDataViewController.m */,
 				1D8FBF461A31A4AE006FCEAE /* Main.storyboard */,
 				1D8FBF491A31A4AE006FCEAE /* Images.xcassets */,
 				1D8FBF4B1A31A4AE006FCEAE /* LaunchScreen.xib */,
@@ -240,6 +245,7 @@
 				1D3754061A31A6EE00FA35E5 /* ShowDataTableViewController.m in Sources */,
 				1D8FBF421A31A4AE006FCEAE /* CoreData.xcdatamodeld in Sources */,
 				1D3754021A31A67C00FA35E5 /* Member.m in Sources */,
+				1DC817BF1A33036E00862B99 /* AddNewDataViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
