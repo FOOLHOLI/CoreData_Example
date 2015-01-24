@@ -61,27 +61,34 @@
     
     return cell;
 }
-*/
 
-/*
+
+
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
     return YES;
 }
-*/
 
-/*
 // Override to support editing the table view.
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
+        [self.managedObjectContext deleteObject:fetchDataArray[indexPath.row]];
+        [self.managedObjectContext save:nil];
+        
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Member" inManagedObjectContext:self.managedObjectContext];
+        fetchRequest.entity = entity;
+        NSSortDescriptor *sortByIndex = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+        NSArray *sortArray = [[NSArray alloc] initWithObjects:sortByIndex, nil];
+        fetchRequest.sortDescriptors = sortArray;
+        fetchDataArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
+        
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }
-*/
 
 /*
 // Override to support rearranging the table view.
