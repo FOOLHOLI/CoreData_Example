@@ -8,7 +8,21 @@
 
 #import "AddNewDataViewController.h"
 
+#import "AppDelegate.h"
+#import "Member.h"
+
+@protocol page2Delegate
+
+- (void)passValue:(NSString *)value;
+
+@end
+
 @interface AddNewDataViewController ()
+
+@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+
+@property (weak, nonatomic) IBOutlet UITextField *nameLabel;
+@property (weak, nonatomic) IBOutlet UITextField *phoneLabel;
 
 @end
 
@@ -17,21 +31,19 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.title = @"新增";
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)save:(id)sender {
+    Member *newMember = [NSEntityDescription insertNewObjectForEntityForName:@"Member" inManagedObjectContext:self.managedObjectContext];
+    newMember.name = self.nameLabel.text;
+    newMember.phoneNumber = self.phoneLabel.text;
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSManagedObjectContext *)managedObjectContext {
+    return [(AppDelegate *) [[UIApplication sharedApplication] delegate] managedObjectContext];
 }
-*/
+
 
 @end
