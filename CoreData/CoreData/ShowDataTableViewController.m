@@ -8,11 +8,21 @@
 
 #import "ShowDataTableViewController.h"
 
+#import "AppDelegate.h"
+#import "Member.h"
+
 @interface ShowDataTableViewController ()
+
+@property (nonatomic, readonly) NSManagedObjectContext *managedObjectContext;
+@property (nonatomic, strong) Member *member;
+
+@property (nonatomic, strong) NSArray *fetchDataArray;
 
 @end
 
 @implementation ShowDataTableViewController
+
+@synthesize fetchDataArray;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,32 +32,32 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+    NSEntityDescription *entity = [NSEntityDescription entityForName:@"Member" inManagedObjectContext:self.managedObjectContext];
+    fetchRequest.entity = entity;
+    NSSortDescriptor *sortByIndex = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES];
+    NSArray *sortArray = [[NSArray alloc] initWithObjects:sortByIndex, nil];
+    fetchRequest.sortDescriptors = sortArray;
+    fetchDataArray = [self.managedObjectContext executeFetchRequest:fetchRequest error:nil];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return [fetchDataArray count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    self.member = fetchDataArray[indexPath.row];
+    cell.textLabel.text = self.member.name;
+    cell.detailTextLabel.text = self.member.phoneNumber;
     
     return cell;
 }
@@ -96,5 +106,9 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (NSManagedObjectContext *)managedObjectContext {
+    return [(AppDelegate *) [[UIApplication sharedApplication] delegate] managedObjectContext];
+}
 
 @end
